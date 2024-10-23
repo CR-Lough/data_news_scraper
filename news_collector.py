@@ -232,8 +232,8 @@ def save_articles(articles):
     # Sort by published_at in descending order (most recent first)
     df = df.sort_values('published_at', ascending=False)
     
-    df.to_csv('data_news_articles.csv', index=False)
-    logging.info(f"Saved {len(df)} unique articles to data_news_articles.csv")
+    df.to_csv('data/data_news_articles.csv', index=False)
+    logging.info(f"Saved {len(df)} unique articles to data/data_news_articles.csv")
 
 if __name__ == "__main__":
     articles = fetch_news_articles()

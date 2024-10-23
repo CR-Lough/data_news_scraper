@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 
 def load_articles():
     try:
-        df = pd.read_csv('combined_news_articles.csv')
+        df = pd.read_csv('data/combined_news_articles.csv')
         return df
     except FileNotFoundError:
         st.error("No articles found. Please run the news collector first.")

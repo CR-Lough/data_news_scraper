@@ -15,8 +15,8 @@ def run_news_collector():
 
 def merge_csv_files():
     # Read the CSV files
-    ai_scraper_df = pd.read_csv('all_articles.csv')
-    news_collector_df = pd.read_csv('data_news_articles.csv')
+    ai_scraper_df = pd.read_csv('data/all_articles.csv')
+    news_collector_df = pd.read_csv('data/data_news_articles.csv')
     news_collector_df['published_at'] = pd.to_datetime(news_collector_df['published_at'], errors='coerce').dt.date
     # Rename columns in ai_scraper_df to match news_collector_df
     news_collector_df = news_collector_df.rename(columns={
@@ -36,8 +36,8 @@ def merge_csv_files():
     combined_df = combined_df.sort_values('publish_date', ascending=False)
 
     # Save the combined dataframe
-    combined_df.to_csv('combined_news_articles.csv', index=False)
-    print(f"Saved {len(combined_df)} combined articles to combined_news_articles.csv")
+    combined_df.to_csv('data/combined_news_articles.csv', index=False)
+    print(f"Saved {len(combined_df)} combined articles to data/combined_news_articles.csv")
 
 def run_streamlit():
     print("Starting Streamlit app...")

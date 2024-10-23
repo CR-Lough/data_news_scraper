@@ -32,28 +32,28 @@ class Articles(BaseModel):
 
 # Sources
 sources = [
-    "https://engineering.fb.com/",
-    "https://www.notion.so/blog/topic/tech",
-    "https://netflixtechblog.com/?gi=6515e0884fa2",
-    "https://stripe.com/blog/engineering",
-    "https://www.uber.com/en-IN/blog/engineering/",
-    "https://medium.com/airbnb-engineering",
-    "https://www.figma.com/blog/engineering/",
-    "https://medium.com/pinterest-engineering",
-    "https://www.reddit.com/r/RedditEng/",
-    "https://instagram-engineering.com/",
-    "https://engineering.atspotify.com/",
-    "https://slack.engineering/",
-    "https://blog.x.com/engineering/en_us",
-    "https://engineering.ramp.com/",
-    "https://www.canva.dev/blog/engineering/",
-    "https://stackoverflow.blog/engineering/",
-    "https://www.coinbase.com/blog/landing/engineering",
-    "https://www.rippling.com/blog/topics?topics=engineering",
-    "https://medium.engineering/",
-    "https://dropbox.tech/",
-    "https://quoraengineering.quora.com/",
-    "https://hacks.mozilla.org/",
+    # "https://engineering.fb.com/",
+    # "https://www.notion.so/blog/topic/tech",
+    # "https://netflixtechblog.com/?gi=6515e0884fa2",
+    # "https://stripe.com/blog/engineering",
+    # "https://www.uber.com/en-IN/blog/engineering/",
+    # "https://medium.com/airbnb-engineering",
+    # "https://www.figma.com/blog/engineering/",
+    # "https://medium.com/pinterest-engineering",
+    # "https://www.reddit.com/r/RedditEng/",
+    # "https://instagram-engineering.com/",
+    # "https://engineering.atspotify.com/",
+    # "https://slack.engineering/",
+    # "https://blog.x.com/engineering/en_us",
+    # "https://engineering.ramp.com/",
+    # "https://www.canva.dev/blog/engineering/",
+    # "https://stackoverflow.blog/engineering/",
+    # "https://www.coinbase.com/blog/landing/engineering",
+    # "https://www.rippling.com/blog/topics?topics=engineering",
+    # "https://medium.engineering/",
+    # "https://dropbox.tech/",
+    # "https://quoraengineering.quora.com/",
+    # "https://hacks.mozilla.org/",
     "https://blog.cloudflare.com/",
 ]
 
@@ -77,7 +77,7 @@ for source in sources:
         all_articles.append(article)
 
 # Save all articles to a CSV file
-csv_filename = 'all_articles.csv'
+csv_filename = 'data/all_articles.csv'
 fieldnames = ['url', 'title', 'source', 'publish_date']
 
 with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:

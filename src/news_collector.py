@@ -86,11 +86,11 @@ def fetch_news_articles():
 
 def save_raw_content(source, content):
     # Create a directory for raw content if it doesn't exist
-    if not os.path.exists('raw_content'):
-        os.makedirs('raw_content')
+    if not os.path.exists('src/raw_content'):
+        os.makedirs('src/raw_content')
     
     # Generate a filename based on the source URL
-    filename = f"raw_content/{source.split('//')[1].replace('/', '_')}.txt"
+    filename = f"src/raw_content/{source.split('//')[1].replace('/', '_')}.txt"
     
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(content)
@@ -232,8 +232,8 @@ def save_articles(articles):
     # Sort by published_at in descending order (most recent first)
     df = df.sort_values('published_at', ascending=False)
     
-    df.to_csv('data/data_news_articles.csv', index=False)
-    logging.info(f"Saved {len(df)} unique articles to data/data_news_articles.csv")
+    df.to_csv('src/data/data_news_articles.csv', index=False)
+    logging.info(f"Saved {len(df)} unique articles to src/data/data_news_articles.csv")
 
 if __name__ == "__main__":
     articles = fetch_news_articles()

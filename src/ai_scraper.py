@@ -77,9 +77,11 @@ for source in sources:
         all_articles.append(article)
 
 # Save all articles to a CSV file
-csv_filename = 'data/all_articles.csv'
+csv_filename = 'src/data/all_articles.csv'
 fieldnames = ['url', 'title', 'source', 'publish_date']
 
+
+os.makedirs(os.path.dirname(csv_filename), exist_ok=True)
 with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()

@@ -12,8 +12,8 @@ A Python-based tool that aggregates technical blog posts and articles from vario
 
 ## Prerequisites
 
-- Python 3.12 or higher
-- Chrome WebDriver (for Selenium-based scraping)
+- OpenAI API Key
+- `uv` installed
 
 ## Installation
 
@@ -74,6 +74,3 @@ The web interface will be available at `http://localhost:8501`
 - KDNuggets
 - BigDataWire
 - The Pragmatic Engineer
-
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
